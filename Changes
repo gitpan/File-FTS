@@ -1,7 +1,7 @@
 Revision history for Perl extension FTS.
 
 0.01  Sun Jan 20 19:59:46 2002
-	- original version; created by h2xs 1.19
+    - original version; created by h2xs 1.19
 
 0.02  Sat Dec 21 19:04:18 2002
     - Modified by Shlomi Fish
@@ -9,4 +9,10 @@ Revision history for Perl extension FTS.
         - Replaced tabs with whitespace
         - At most one directory handle opened at a time by storing
           the file-lists.
+
+0.03  Mon Dec 23 09:05:05 2002
+    - Modified by Shlomi Fish
+        - Modified the documentation to accomodate for the fact
+        that Ariel has passed away.        
+        - Changed FTS to File::FTS in the POD
 

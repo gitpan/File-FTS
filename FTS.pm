@@ -6,7 +6,7 @@ use File::Spec;
 
 use vars qw($VERSION);
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 sub new {
     my ($class, $base) = @_;
@@ -55,8 +55,8 @@ FTS - Perl extension for File Traversing System
 
 =head1 SYNOPSIS
 
-  use FTS;
-  $fts = new FTS("/usr/local");
+  use File::FTS;
+  $fts = new File::FTS("/usr/local");
   while ($file = $fts->Dive) {
       print "$file\n";
   }
@@ -71,7 +71,7 @@ Inspired by the BSD fts library.
 =head1 AUTHOR
 
 Original Author: Ariel Brosh, L<http://search.cpan.org/author/SCHOP/> (Ariel
-has unexpectdly passed away and this module has been adopted by someone else)
+has unexpectdly passed away and this module has been adopted by others)
 
 Current Maintainer: Shlomi Fish, B<shlomif@cpan.org>
 

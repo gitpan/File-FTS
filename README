@@ -2,8 +2,8 @@ NAME
     FTS - Perl extension for File Traversing System
 
 SYNOPSIS
-      use FTS;
-      $fts = new FTS("/usr/local");
+      use File::FTS;
+      $fts = new File::FTS("/usr/local");
       while ($file = $fts->Dive) {
           print "$file\n";
       }
@@ -15,8 +15,11 @@ DESCRIPTION
     Inspired by the BSD fts library.
 
 AUTHOR
-    Original Author: Ariel Brosh, schop@cpan.org Current Maintainer: Shlomi
-    Fish, shlomif@cpan.org
+    Original Author: Ariel Brosh, <http://search.cpan.org/author/SCHOP/>
+    (Ariel has unexpectdly passed away and this module has been adopted by
+    others)
+
+    Current Maintainer: Shlomi Fish, shlomif@cpan.org
 
 SEE ALSO
     perl(1), File::Find, fts(3).
