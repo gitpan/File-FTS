@@ -3,20 +3,21 @@ NAME
 
 SYNOPSIS
       use FTS;
-      $fts = new FST("/usr/local");
+      $fts = new FTS("/usr/local");
       while ($file = $fts->Dive) {
-            print "$file\n";
+          print "$file\n";
       }
 
 DESCRIPTION
-    This is similar to File::Find, but works non recursively.
-    Symbolic links to directories are skipped.
+    This is similar to File::Find, but works non recursively. Symbolic links
+    to directories are skipped.
 
     Inspired by the BSD fts library.
 
 AUTHOR
-    Ariel Brosh, schop@cpan.org
+    Original Author: Ariel Brosh, schop@cpan.org Current Maintainer: Shlomi
+    Fish, shlomif@cpan.org
 
 SEE ALSO
-    perl(1), the File::Find manpage, fts(3).
+    perl(1), File::Find, fts(3).
 
