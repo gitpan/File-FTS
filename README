@@ -1,0 +1,22 @@
+NAME
+    FTS - Perl extension for File Traversing System
+
+SYNOPSIS
+      use FTS;
+      $fts = new FST("/usr/local");
+      while ($file = $fts->Dive) {
+            print "$file\n";
+      }
+
+DESCRIPTION
+    This is similar to File::Find, but works non recursively.
+    Symbolic links to directories are skipped.
+
+    Inspired by the BSD fts library.
+
+AUTHOR
+    Ariel Brosh, schop@cpan.org
+
+SEE ALSO
+    perl(1), the File::Find manpage, fts(3).
+
