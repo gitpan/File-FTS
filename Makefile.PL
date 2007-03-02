@@ -1,3 +1,5 @@
+use strict;
+
 use ExtUtils::MakeMaker;
 # See lib/ExtUtils/MakeMaker.pm for details of how to influence
 # the contents of the Makefile that is written.
@@ -7,7 +9,7 @@ sub MY::postamble {
         shift->SUPER::postamble . <<'MAKE';
 dist : README
 
-README : FTS.pm
+README : lib/File/FTS.pm
 	@$(PERL) -MPod::Text -e "pod2text('$<');" > $@
 
 MAKE
@@ -15,7 +17,7 @@ MAKE
 
 WriteMakefile(
     'NAME'	=> 'File::FTS',
-    'VERSION_FROM' => 'FTS.pm', # finds $VERSION
-    'dist' => {'COMPRESS' => 'gzip --best --force'},
+    'VERSION_FROM' => 'lib/File/FTS.pm', # finds $VERSION
+    'PL_FILES' => {},
 );
 

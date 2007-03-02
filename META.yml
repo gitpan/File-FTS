@@ -1,0 +1,16 @@
+---
+name: File-FTS
+version: 0.04
+author: []
+abstract: Perl extension for File Traversing System
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+provides:
+  File::FTS:
+    file: lib/File/FTS.pm
+    version: 0.04
+generated_by: Module::Build version 0.2805
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2

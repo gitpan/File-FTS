@@ -1,6 +1,11 @@
+Build.PL
 Changes
-FTS.pm
+examples/tree.pl
+lib/File/FTS.pm
 Makefile.PL
 MANIFEST
+META.yml                                 Module meta-data (added by MakeMaker)
 README
-test.pl
+t/00-load.t
+t/pod-coverage.t
+t/pod.t

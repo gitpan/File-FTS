@@ -6,7 +6,7 @@ use File::Spec;
 
 use vars qw($VERSION);
 
-$VERSION = '0.03';
+$VERSION = '0.04';
 
 sub new {
     my ($class, $base) = @_;
@@ -53,11 +53,18 @@ __END__
 
 FTS - Perl extension for File Traversing System
 
+=head1 IMPORTANT NOTE!
+
+This module is depcrecated and no longer actively maintained, except for some
+maintenance. It is kept on CPAN for backwards compatibility. You should look 
+at L<File::Find::Object> instead, which is more complete and more actively 
+maintained.
+
 =head1 SYNOPSIS
 
   use File::FTS;
-  $fts = new File::FTS("/usr/local");
-  while ($file = $fts->Dive) {
+  my $fts = new File::FTS("/usr/local");
+  while (my $file = $fts->Dive) {
       print "$file\n";
   }
 
@@ -68,15 +75,31 @@ Symbolic links to directories are skipped.
 
 Inspired by the BSD fts library.
 
+=head1 FUNCTIONS
+
+=head2 my $fts = File::FTS->new($dir)
+
+Constructs a new File::FTS object that operates on the directory $dir.
+
+=head2 my $file = $fts->Dive()
+
+Returns the next file.
+
 =head1 AUTHOR
 
 Original Author: Ariel Brosh, L<http://search.cpan.org/author/SCHOP/> (Ariel
 has unexpectdly passed away and this module has been adopted by others)
 
-Current Maintainer: Shlomi Fish, B<shlomif@cpan.org>
+Current Maintainer: Shlomi Fish, L<http://search.cpan.org/author/SHLOMIF/>
 
 =head1 SEE ALSO
 
-perl(1), L<File::Find>, fts(3).
+perl(1), L<File::Find>, fts(3), L<File::Find::Object>.
+
+=head1 LICENSE
+
+This module did not contain any license information when I inherited it
+from its deceased author. According to my interpretation it is licensed
+according to the terms of perl5 itself.
 
 =cut
